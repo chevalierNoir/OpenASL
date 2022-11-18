@@ -1,7 +1,7 @@
 # OpenASL: A Large-Scale Open-Domain Sign Language Translation Dataset
 ![openasl-data](assets/teaser.gif)
 
-## Instructions
+## Introduction
 This repo contains OpenASL dataset proposed in paper: [Open-Domain Sign Language Translation Learned from Online Video](https://arxiv.org/abs/2205.12870)
 
 If you use OpenASL data in your research, please use the following BibTeX entry for citation.
