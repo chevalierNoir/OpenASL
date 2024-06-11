@@ -90,7 +90,7 @@ def get_clip(input_video_dir, output_video_dir, tsv_fn, bbox_fn, rank, nshard, t
         print(bbox, frames_origin[0].shape, target_size)
         rois = crop_resize(frames_origin, bbox, target_size)
         print(f"Saving ROIs to {output_video}")
-        write_video_ffmpeg(rois, output_video, ffmpeg=ffmpeg)
+        write_video_ffmpeg(rois, output_video.replace(':', '%'), ffmpeg=ffmpeg)
     return
 
 
