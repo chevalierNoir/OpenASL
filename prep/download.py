@@ -27,7 +27,7 @@ def main():
     os.makedirs(args.dest, exist_ok=True)
     youtube_dl = os.path.join(os.getcwd(), "youtube-dl")
     if not os.path.isfile(youtube_dl):
-        cmd = f"curl -L https://yt-dl.org/downloads/latest/youtube-dl -o {youtube_dl}\nchmod +rx {youtube_dl}"
+        cmd = f"curl -L https://github.com/ytdl-org/ytdl-nightly/releases/latest/download/youtube-dl -o {youtube_dl}\nchmod +rx {youtube_dl}"
         print(cmd)
         subprocess.call(cmd, shell=True)
     if not args.slurm:
