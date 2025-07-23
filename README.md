@@ -28,7 +28,12 @@ If you are on slurm, you can parallelize the video downloading with the followin
 python prep/download.py --tsv data/openasl-v1.0.tsv --dest /path/to/raw-video --nshard ${nshard} --slurm
 ```
 
-where `${nshard}` is the number of jobs to launch. The slurm arguments can be modified via `--slurm-argument '{"slurm_array_parallelism":100,"slurm_partition":"cpu","timeout_min":240,"slurm_mem":"16g"}'`. Note some videos may no longer be publicly available. 
+where `${nshard}` is the number of jobs to launch. The slurm arguments can be modified via `--slurm-argument '{"slurm_array_parallelism":100,"slurm_partition":"cpu","timeout_min":240,"slurm_mem":"16g"}'`. 
+> **Note:**
+> - Video downloading has migrated from `youtube-dl` to [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), which provides better compatibility. 
+> - Some videos may no longer be publicly available. 
+
+
 
 ### 2. Video preprocessing
 The following command will trim the raw video into clips and spatially crop the video clips.
