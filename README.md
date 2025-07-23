@@ -15,6 +15,10 @@ If you use OpenASL data in your research, please use the following BibTeX entry 
 }
 ```
 
+
+## Change Log
+**2025-07-22**: Video downloading has been migrated from `youtube-dl` to `yt-dlp` due to issues observed with `youtube-dl`. After switching, the downloading script should now work as expected.
+
 ## Instructions
 ### 1. Download videos
 Run the following command to download videos into `/path/to/raw-video`.
@@ -29,9 +33,7 @@ python prep/download.py --tsv data/openasl-v1.0.tsv --dest /path/to/raw-video --
 ```
 
 where `${nshard}` is the number of jobs to launch. The slurm arguments can be modified via `--slurm-argument '{"slurm_array_parallelism":100,"slurm_partition":"cpu","timeout_min":240,"slurm_mem":"16g"}'`. 
-> **Note:**
-> - Video downloading has migrated from `youtube-dl` to [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), which provides better compatibility. 
-> - Some videos may no longer be publicly available. 
+> **Note:** Some videos may no longer be publicly available. 
 
 
 
